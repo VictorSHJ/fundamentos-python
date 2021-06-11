@@ -54,12 +54,9 @@ print("Resultado:", mifuncion(students))
 def mifuncion(lista):  
     for deporte in lista:
         print(lista[deporte])
-        for jugador in lista[deporte]:
-            print (jugador)
-            if jugador == 'Messi':
-                print("Es Messi")
-                jugador = 'Andres'
-        
+        for jugador in range (len(lista[deporte])):
+            if lista[deporte][jugador] == 'Messi':
+                lista[deporte][jugador] = 'Andres'
     return lista
 
 sports_directory = {
